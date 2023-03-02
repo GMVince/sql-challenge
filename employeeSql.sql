@@ -1,7 +1,7 @@
 
 create table departments (
-	dept_no varchar,
-	dept_name varchar
+	dept_no varchar pk not null,
+	dept_name varchar not null
 );
 insert into departments (dept_no, dept_name)
 values	
@@ -18,28 +18,28 @@ values
 --from departments
 
 create table dept_emp (
-	emp_no integer,
-	dept_no varchar
+	emp_no integer not null,
+	dept_no varchar not null
 );
 --select *
 --from dept_emp
 
 create table dept_manager (
-	dept_no varchar,
-	emp_no integer
+	dept_no varchar not null,
+	emp_no integer not  null
 );
 --select *
 --from dept_manager
 
 
 create table employees (
-	emp_no integer,
+	emp_no integer pk not null,
 	emp_title varchar,
-	birth_date date,
-	first_name varchar,
-	last_name varchar,
-	sex varchar,
-	hire_date date
+	birth_date date not null,
+	first_name varchar not null,
+	last_name varchar not null,
+	sex varchar not null,
+	hire_date date not null
 );
 --select *
 --from employees
@@ -52,8 +52,8 @@ create table salaries (
 --from salaries
 
 create table titles (
-	title_id varchar,
-	title varchar
+	title_id varchar not null,
+	title varchar not null,
 );
 
 
